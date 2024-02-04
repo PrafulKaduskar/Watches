@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+*{
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;  
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --dark-blue: #0A1D3C;
+    --light-gray: #e5e5e5;
+    --white: #FFF;
+    --light-peach: #f9E3BC;
+    --dark-gray:#3E3f43;
+    --light-black: #1d1d1d;    
+}
+
+
+/* ---------Section 1---------------------- */
+
+
+header{
+    width: 80%;
+    height: calc(100vh - 13vh);
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navlinks{
+
+    display: flex;
+}
+
+.header-image{
+    width: 28rem;
+   }
+
+   .logo{
+
+    font-size: 3.3rem; color: var(--dark-blue); font-family: 'Allison',
+cursive; margin-left: 75rem; }
+
+.navlinks li{
+    list-style: none;
+}
+
+.navlinks li a{
+    text-decoration: none;
+    margin-left: 2.5rem;
+    color: var(--dark-gray);
+    font-size: 1rem;
+    letter-spacing: .03rem;
+    position: relative;
+    justify-content: space-between;
+}
+
+.Product-name{
+    font-size: 1.7rem;
+}
+
+.header-price{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.primary, .secondary{
+    font-size: 1.1rem;
+    border: none;
+    padding: 1rem 1.7rem;
+    transition: transform .5s ease-in-out;
+
+}
+.btn-container{
+    display: flex;
+    margin-top: 2rem;
+}
+.primary{
+    background: var(--light-gray);
+}
+
+.secondary{
+    background-color: var(--dark-blue);
+    color: white;
+    transform: scale(1.1);
+}
+
+.primary:hover, .section-two-btn:hover, .section-four-btn:hover{
+    transform:  scale(1.1);
+    cursor: pointer;
+}
+
+.secondary:hover{
+    transform: scale(1);
+
+}
+
+.navlinks li a::after, .navlinks li .active::after{
+    content: "";
+    background: var(--dark-gray);
+    position: absolute;
+    height: .15rem;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform .5s ease;
+    transform-origin: right;
+}
+
+.navlinks li a:hover::after, .navlinks li .active::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.line{
+    background: var(--dark-gray);
+    width: 2rem;
+    height: .2rem;
+    margin: .38rem;
+
+}
+
+.humburger{
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+/* ----------------Section 2----------------------- */
+.section-two{
+    display: flex;
+    align-items: center;
+} 
+
+.section-two-container {
+    background: var(--light-peach);
+    width: 100%;
+    height: 50vh;
+    transform: skewY(-6deg);
+}
+
+.section-two-image{
+   width: 24rem;
+   
+  }
+
+  .section-two-inner-container{
+    transform: skewY(6deg);
+    width: 80%;
+    margin: auto;
+  }
+
+  .section-two-container, .section-two-inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+
+  .section-heading{
+    color: var(--dark-gray);
+    font-family: 4rem;
+      }
+
+  .section-para{
+
+    font-size: 1rem;
+    color: var(--dark-gray);
+    line-height: 1.8rem;
+    max-width: 80%;
+  }
+
+.sectionprice{
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+    margin: .9rem 0;
+
+
+}
+.section-two-btn{
+    padding: .9rem 1,7rem;
+    border: .1rem solid var(--light-black);
+    font-size: 1.1rem;
+    background:transparent;
+    transition: transform .5s ease;
+ }
+
+
+                     /*<----------------- section 3  --------------->*/
+                     
+                     
+.section-heading3{
+
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem ;
+
+    }
+
+.card-container{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+
+}
+
+.card-image{
+    width: 20rem;
+
+}
+
+.card{
+    background: var(--light-gray);
+    padding: 2rem;
+}
+
+.card-pricing{
+    font-size: 1.2rem;
+    margin-top: .2rem;
+    margin-bottom: 1.2rem;
+
+}
+
+/*<------------------------- section four -------------------------> */ 
+
+.section-four{
+    display: flex;
+    align-items: center;
+}
+
+
+.section-fourcontainer{
+   
+    width: 100%;
+    height: 70vh;
+    background-image: url("./watch.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+}
+
+.section-four-offer{
+    font-size: 4rem;
+    color: var(--light-peach);
+    font-family: 'Allison', cursive;
+    text-transform: uppercase;
+}
+
+.section-four-heading{
+    font-size: 4rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    
+}
+.section-four-btn{
+     font-size: 1.1rem;
+     padding: 1rem 1.7rem;
+     background: var(--light-peach);
+     border: none;
+     transition: transform .5s ease;
+}
+
+.section-four-container::before{
+    content: "";
+    background: rgb(0, 0, 0);
+    position: absolute;
+    inset: 0; 
+}
+
+.section-four-container  .content{
+
+    z-index: 5;
+}
+
+
+
+/* ----------------------------------------Section 5------------------------- */
+
+
+.grid-card-container{
+    
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.2rem;
+    grid-auto-rows: 15rem;
+}
+
+.grid-card{
+    background: var(--light-gray);
+    position: relative;
+    background-position: centers;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.grid-card:nth-child(1){
+    grid-row: 1/4;
+    background-image: url("images/rado watch.jpg");
+}
+
+.grid-card:nth-child(2){
+    background-image: url("images/geneve watch.jpg");
+    
+}
+
+.grid-card:nth-child(3){
+    grid-row: 1/3;
+    background-image: url("images/tissot watch.jpg");
+}
+
+.grid-card:nth-child(4){
+    grid-row: 3/4;
+    background-image: url("images/cartier watch.jpg");
+}
+
+.grid-card:nth-child(5){
+    background-image: url("images/omega watch.jpg");
+}
+.grid-card:nth-child(6){
+    background-image: url("images/fitron watch.jpg");
+}
+
+.grid-card::before{
+    content: "";
+    position: absolute;
+    background: rgb(0, 0, 0, 0.544);
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s ease-in-out;
+
+}
+.grid-card:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.grid-card::after{
+    content: attr(collection);
+    position: absolute;
+    text-transform: uppercase;
+    background: var(--light-peach);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.7rem;
+    font-size: 1.1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out;
+}
+
+.grid-card:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* -----------------Footer--------------------- */
+
+.footers{
+    background: var(--light-black);
+    color: white;
+    font-size: 1.5rem;
+    height: 20vh;
+    width: 100%;
+    margin-top:5rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
